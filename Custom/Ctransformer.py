@@ -337,6 +337,3 @@ class Rename(Transform):
                 
                 i += 1
                 
-
-r = Rename()
-r()
