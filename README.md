@@ -8,14 +8,14 @@ Ctransformer.py: Using jsons created with labelme. With torchvision-transform an
 
 To perform each transform individually,
 
-                Compose{[Ctransformer."A transform()", Ctransformer."B transform()", ...]}
+                Compose{[Ctransformer.A transform(), Ctransformer.B transform(), ...]}
                 
 -> result: A transformed images, B transformed images
 
 
 To perform each transform sequentially,
 
-                SeqCompose{[Ctransformer."your transform1()", Ctransformer."your transform2()", ...]} to perform each transform together.
+                SeqCompose{[Ctransformer.transformA(), Ctransformer.transformB(), ...]} to perform each transform together.
                 
 -> result: A+B transformed image
 
