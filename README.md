@@ -1,5 +1,5 @@
 # site-packages
-My site packages for data-processing
+For data-processing utilities 
 
 Use Utils.py to select paths, visualize custom model report from json file(wip)
 
