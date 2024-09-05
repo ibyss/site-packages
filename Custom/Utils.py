@@ -14,7 +14,7 @@ def requestfile(file_name=None):
 
 class visualization:
     def __init__(self):
-        self.jsonfile = f"C:/Users/chanj/Code/torch/computervision/vgg16/vgg16_test4.json"#requestpath(path_name="Json file")
+        #self.jsonfile = f"your path"
         self()
     def __call__(self):
         with open(self.jsonfile) as f:
@@ -60,5 +60,4 @@ class visualization:
         ax1.legend(lines_1 + lines_2, labels_1 + labels_2, fontsize=10)
         
         plt.title(f"{name} at {start_time}~{end_time}(Total epoch: {total_epoch})")
-        #plt.subplots_adjust(right=0.8)
         plt.show()
