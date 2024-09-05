@@ -312,28 +312,28 @@ class Compose(Transform):
             print(f"Transform ({i+1}) Done: Transform Type: {return_value[1]}")
             i += 1
 
-class Rename(Transform):
-    def __init__(self):
-        #super().__init__()
-        #self.__initialize_path__()
-        self.path="C:/Users/chanj/Desktop/123/새 폴더/testre"
-    def __call__(self):
-        i = 1
-        for file in os.listdir(self.path):
-            if file.endswith('.jpg'):
-                _jpg = os.path.join(self.path, file)
-                _json = _jpg.replace(".jpg", ".json")
-                new_jpg = os.path.join(self.path, f"{str(i)}.jpg")
-                new_json = os.path.join(self.path, f"{str(i)}.json")
-                os.rename(_jpg, new_jpg)
-                if os.path.exists(_json):
-                    with open(_json) as f:
-                        data = json.load(f)
-                        data["imagePath"] = f"{str(i)}.jpg"
-                        with open(new_json, 'w') as f:
-                            json.dump(data, f)
+# class Rename(Transform):
+#     def __init__(self):
+#         #super().__init__()
+#         #self.__initialize_path__()
+#         self.path="C:/Users/chanj/Desktop/123/새 폴더/testre"
+#     def __call__(self):
+#         i = 1
+#         for file in os.listdir(self.path):
+#             if file.endswith('.jpg'):
+#                 _jpg = os.path.join(self.path, file)
+#                 _json = _jpg.replace(".jpg", ".json")
+#                 new_jpg = os.path.join(self.path, f"{str(i)}.jpg")
+#                 new_json = os.path.join(self.path, f"{str(i)}.json")
+#                 os.rename(_jpg, new_jpg)
+#                 if os.path.exists(_json):
+#                     with open(_json) as f:
+#                         data = json.load(f)
+#                         data["imagePath"] = f"{str(i)}.jpg"
+#                         with open(new_json, 'w') as f:
+#                             json.dump(data, f)
 
-                    os.remove(_json)
+#                     os.remove(_json)
                 
-                i += 1
+#                 i += 1
                 
